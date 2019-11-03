@@ -4,10 +4,10 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 3
-Title ""
-Date ""
-Rev ""
-Comp ""
+Title "6502 Computer"
+Date "2019-11-02"
+Rev "1"
+Comp "Byron Lathi"
 Comment1 ""
 Comment2 ""
 Comment3 ""
