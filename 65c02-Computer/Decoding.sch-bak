@@ -1,0 +1,54 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 3
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L 74xx:74LS04 U?
+U 2 1 5DCDA2AA
+P 4900 3350
+AR Path="/5DCDA2AA" Ref="U?"  Part="2" 
+AR Path="/5DCD4933/5DCDA2AA" Ref="U?"  Part="2" 
+F 0 "U?" H 4900 3667 50  0000 C CNN
+F 1 "74LS04" H 4900 3576 50  0000 C CNN
+F 2 "" H 4900 3350 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 4900 3350 50  0001 C CNN
+	2    4900 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS04 U?
+U 3 1 5DCDA2B0
+P 3550 3350
+F 0 "U?" H 3550 3667 50  0000 C CNN
+F 1 "74LS04" H 3550 3576 50  0000 C CNN
+F 2 "" H 3550 3350 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 3550 3350 50  0001 C CNN
+	3    3550 3350
+	1    0    0    -1  
+$EndComp
+Text GLabel 3250 3350 0    50   Input ~ 0
+~WR
+Text GLabel 3850 3350 2    50   Output ~ 0
+~RD
+Text HLabel 4600 3350 0    50   Input ~ 0
+A15
+Text HLabel 5200 3350 2    50   Output ~ 0
+~CSROM
+Text HLabel 4600 3700 0    50   Input ~ 0
+A15
+Text HLabel 5200 3700 2    50   Output ~ 0
+~CSRAM
+Wire Wire Line
+	4600 3700 5200 3700
+$EndSCHEMATC
