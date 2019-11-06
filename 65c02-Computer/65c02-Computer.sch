@@ -738,10 +738,10 @@ Wire Wire Line
 Wire Wire Line
 	3200 850  3600 850 
 $Comp
-L ICs:65C22 U?
+L ICs:65C22 U6
 U 1 1 5DC5464F
 P 9400 4200
-F 0 "U?" H 9400 5381 50  0000 C CNN
+F 0 "U6" H 9400 5381 50  0000 C CNN
 F 1 "65C22" H 9400 5290 50  0000 C CNN
 F 2 "Package_DIP:DIP-40_W15.24mm_Socket_LongPads" H 9250 3850 50  0001 C CNN
 F 3 "https://www.westerndesigncenter.com/wdc/documentation/w65c22.pdf" H 9250 3850 50  0001 C CNN
@@ -749,10 +749,10 @@ F 3 "https://www.westerndesigncenter.com/wdc/documentation/w65c22.pdf" H 9250 38
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR?
+L power:+5V #PWR019
 U 1 1 5DC743B7
 P 8700 2850
-F 0 "#PWR?" H 8700 2700 50  0001 C CNN
+F 0 "#PWR019" H 8700 2700 50  0001 C CNN
 F 1 "+5V" H 8715 3023 50  0000 C CNN
 F 2 "" H 8700 2850 50  0001 C CNN
 F 3 "" H 8700 2850 50  0001 C CNN
@@ -764,10 +764,10 @@ Wire Wire Line
 Wire Wire Line
 	8700 2900 8800 2900
 $Comp
-L power:GND #PWR?
+L power:GND #PWR020
 U 1 1 5DC7A360
 P 8750 5650
-F 0 "#PWR?" H 8750 5400 50  0001 C CNN
+F 0 "#PWR020" H 8750 5400 50  0001 C CNN
 F 1 "GND" H 8755 5477 50  0000 C CNN
 F 2 "" H 8750 5650 50  0001 C CNN
 F 3 "" H 8750 5650 50  0001 C CNN
@@ -864,16 +864,12 @@ Text Label 2650 4100 0    50   ~ 0
 ~RESET
 Wire Wire Line
 	2550 4100 2850 4100
-Text Label 1900 3750 0    50   ~ 0
-PHI2
 Text Label 8500 3500 0    50   ~ 0
 ~RESET
 Wire Wire Line
 	8500 3500 8800 3500
 Wire Wire Line
 	8800 3100 8500 3100
-Text Label 8500 3100 0    50   ~ 0
-PHI2
 Wire Wire Line
 	8800 3800 8400 3800
 Text Label 8400 3800 0    50   ~ 0
@@ -899,8 +895,16 @@ V1_CS1
 Text Label 3600 1100 2    50   ~ 0
 V1_CS2B
 NoConn ~ 8800 3300
+Text Label 8500 3100 0    50   ~ 0
+PHI2
+Text Label 1900 3750 0    50   ~ 0
+CLK
+Wire Wire Line
+	4250 3600 4500 3600
 Wire Bus Line
 	8500 4300 8500 6000
+Wire Bus Line
+	8600 4800 8600 6100
 Wire Bus Line
 	8150 3350 8150 6100
 Wire Bus Line
@@ -908,11 +912,11 @@ Wire Bus Line
 Wire Bus Line
 	2650 4550 2650 6100
 Wire Bus Line
-	8600 4800 8600 6100
-Wire Bus Line
 	5350 3350 5350 6000
 Wire Bus Line
 	6950 3350 6950 6000
 Wire Bus Line
 	4450 4100 4450 6000
+Text Label 4500 3600 2    50   ~ 0
+PHI2
 $EndSCHEMATC

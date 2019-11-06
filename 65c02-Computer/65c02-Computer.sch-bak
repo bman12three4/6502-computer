@@ -864,16 +864,12 @@ Text Label 2650 4100 0    50   ~ 0
 ~RESET
 Wire Wire Line
 	2550 4100 2850 4100
-Text Label 1900 3750 0    50   ~ 0
-PHI2
 Text Label 8500 3500 0    50   ~ 0
 ~RESET
 Wire Wire Line
 	8500 3500 8800 3500
 Wire Wire Line
 	8800 3100 8500 3100
-Text Label 8500 3100 0    50   ~ 0
-PHI2
 Wire Wire Line
 	8800 3800 8400 3800
 Text Label 8400 3800 0    50   ~ 0
@@ -890,22 +886,6 @@ Wire Wire Line
 	2450 900  2250 900 
 Wire Wire Line
 	2450 1000 2250 1000
-Wire Bus Line
-	8500 4300 8500 6000
-Wire Bus Line
-	8150 3350 8150 6100
-Wire Bus Line
-	6550 3350 6550 6100
-Wire Bus Line
-	2650 4550 2650 6100
-Wire Bus Line
-	8600 4800 8600 6100
-Wire Bus Line
-	5350 3350 5350 6000
-Wire Bus Line
-	6950 3350 6950 6000
-Wire Bus Line
-	4450 4100 4450 6000
 Text Label 2250 900  0    50   ~ 0
 A14
 Text Label 2250 1000 0    50   ~ 0
@@ -914,4 +894,29 @@ Text Label 3600 1000 2    50   ~ 0
 V1_CS1
 Text Label 3600 1100 2    50   ~ 0
 V1_CS2B
+NoConn ~ 8800 3300
+Text Label 8500 3100 0    50   ~ 0
+PHI2
+Text Label 1900 3750 0    50   ~ 0
+CLK
+Wire Wire Line
+	4250 3600 4500 3600
+Wire Bus Line
+	8500 4300 8500 6000
+Wire Bus Line
+	8600 4800 8600 6100
+Wire Bus Line
+	8150 3350 8150 6100
+Wire Bus Line
+	6550 3350 6550 6100
+Wire Bus Line
+	2650 4550 2650 6100
+Wire Bus Line
+	5350 3350 5350 6000
+Wire Bus Line
+	6950 3350 6950 6000
+Wire Bus Line
+	4450 4100 4450 6000
+Text Label 4500 3600 2    50   ~ 0
+PHI2
 $EndSCHEMATC
