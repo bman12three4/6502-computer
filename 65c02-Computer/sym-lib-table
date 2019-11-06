@@ -189,4 +189,5 @@
   (lib (name Valve)(type Legacy)(uri ${KICAD_SYMBOL_DIR}/schematic_kicad/Valve.lib)(options "")(descr ""))
   (lib (name Video)(type Legacy)(uri ${KICAD_SYMBOL_DIR}/schematic_kicad/Video.lib)(options "")(descr ""))
   (lib (name 28-sim-hw-rescue)(type Legacy)(uri ${KIPRJMOD}/28-sim-hw-rescue.lib)(options "")(descr ""))
+  (lib (name 65c02-Computer-rescue)(type Legacy)(uri ${KIPRJMOD}/65c02-Computer-rescue.lib)(options "")(descr ""))
 )

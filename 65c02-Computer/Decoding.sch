@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:65c02-Computer-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -53,4 +54,27 @@ Text HLabel 5200 3700 2    50   Output ~ 0
 ~CSRAM
 Wire Wire Line
 	4600 3700 5200 3700
+Text HLabel 4600 3950 0    50   Input ~ 0
+A14
+Text HLabel 5200 3950 2    50   Output ~ 0
+V1_CS1
+Wire Wire Line
+	4600 3950 5200 3950
+$Comp
+L 74xx:74LS32 U7
+U 1 1 5DD09F52
+P 4900 4350
+F 0 "U7" H 4900 4675 50  0000 C CNN
+F 1 "74LS32" H 4900 4584 50  0000 C CNN
+F 2 "" H 4900 4350 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 4900 4350 50  0001 C CNN
+	1    4900 4350
+	1    0    0    -1  
+$EndComp
+Text HLabel 4600 4250 0    50   Input ~ 0
+A15
+Text HLabel 4600 4450 0    50   Input ~ 0
+A13
+Text HLabel 5200 4350 2    50   Output ~ 0
+V1_CS2B
 $EndSCHEMATC
