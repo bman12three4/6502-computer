@@ -1,0 +1,12 @@
+start:	lda #$07
+	sta $4003	; Set pins 1 and 2 to output, the rest are inputs
+loop:	lda $4001
+	and #$18
+	cmp #$18
+	bne off
+	lda #$04
+	sta $4001	; I swear if this doesn't light up the blue led...
+	jmp loop
+off:	lda #$00
+	sta $4001
+	jmp loop

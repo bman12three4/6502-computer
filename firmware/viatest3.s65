@@ -1,0 +1,13 @@
+start:	lda #$07
+	sta $4003	; Set pins 1 and 2 to output, the rest are inputs
+loop:	lda $4001	; Get current values
+	lsr
+	lsr
+	lsr
+	cmp #$3
+	beq both
+	sta $4001
+	jmp loop
+both:	lda #$4
+	sta $4001
+	jmp loop

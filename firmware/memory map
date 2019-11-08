@@ -1,0 +1,8 @@
+A15 low AND A14 low, memory from 0-3fff
+00xxxxxxxxxxxxxx
+A15 low AND A14 high, and A13 low via from 4000-5fff
+010xxxxxxxxxxxxx
+A15 low AND a14 high, and A13 high, A2 low acia from 6000-7fff
+011xxxxxxxxxxxxx
+
+a15 | a14 - mce (if either is high then disabled)

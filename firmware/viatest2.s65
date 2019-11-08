@@ -1,0 +1,8 @@
+start:	lda #$03
+	sta $4003	; Set pins 1 and 2 to output, the rest are inputs
+loop:	lda $4001	; Get current values
+	lsr		; shift right twice
+	lsr		; so bits 2 and 3 become 0 and 1
+	sta $4001	; Set Port A to 10
+	jsr delay	; Wait
+	jmp loop 	; Go back to beginning

@@ -1,0 +1,19 @@
+start:	lda #$ff
+	sta $4003	; Set DDRA to all output
+loop:	lda #$01
+	sta $4001	; Set Port A to 01
+	jsr delay	; Wait
+	lda #$02
+	sta $4001	; Set Port A to 10
+	jsr delay	; Wait
+	jmp loop 	; Go back to beginning
+	
+delay:	ldy $ff		; set y to 255
+delay1:	ldx $ff		; set x to 255
+delay2:	dex		; decrement x until 0
+	beq delay3	; go to delay3 when x=0
+	jmp delay2
+delay3:	dey		; decrement y, then run x from 255 to 0 again
+	beq delay4	; after going from 255-0 256 times, delay is over
+	jmp delay1
+delay4:	rts		; Go back to the main program

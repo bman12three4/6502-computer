@@ -1,0 +1,6 @@
+	.org	$8000
+
+start:	lda #$0
+	sta $00
+loop:	inc $00
+	jmp loop

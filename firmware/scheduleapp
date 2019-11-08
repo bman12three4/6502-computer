@@ -1,0 +1,27 @@
+TODO for schedule app
+
+- Some way too show the nearest bus stop to each location (manually entered)
+   * If you click on it or tap it with a finger then it could change to bus mode
+     either for that class or for all classes
+- A way of saying that a user does not exist and redirecting either to the home page
+  or the create user page.
+    * "The user "$user" does not exist. Would you like to create it? [Create User][Go Back]"
+
+
+
+
+
+
+- [DONE] JSON creator: easily make or change schedules
+   * Name, Course, Location (bus stop?), start and end (text and number), and color
+   * It should show them as they are being created
+   * A way to pick colors from a color wheel or palette would be nice
+   * It should be able to show the whole week or a single day
+   * It looks like the easiest way to do this without installing too much extra is to 
+     have a javascript thing that creates the schedule as an object, then use 
+     stringify to convert it to a string and send that to a php script which will
+     save it to a file. There needs to be a way to make sure that no hackers can 
+     upload a file that would hack the server or something though.
+- [DONE] Multiple schedules for multiple people
+   * probably as some sort of url extension ("&user=x") or something
+     so that when downloaded to a phone, you do not have to type anything

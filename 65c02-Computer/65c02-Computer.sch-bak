@@ -738,10 +738,10 @@ Wire Wire Line
 Wire Wire Line
 	3200 850  3600 850 
 $Comp
-L ICs:65C22 U?
+L ICs:65C22 U6
 U 1 1 5DC5464F
 P 9400 4200
-F 0 "U?" H 9400 5381 50  0000 C CNN
+F 0 "U6" H 9400 5381 50  0000 C CNN
 F 1 "65C22" H 9400 5290 50  0000 C CNN
 F 2 "Package_DIP:DIP-40_W15.24mm_Socket_LongPads" H 9250 3850 50  0001 C CNN
 F 3 "https://www.westerndesigncenter.com/wdc/documentation/w65c22.pdf" H 9250 3850 50  0001 C CNN
@@ -749,10 +749,10 @@ F 3 "https://www.westerndesigncenter.com/wdc/documentation/w65c22.pdf" H 9250 38
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR?
+L power:+5V #PWR019
 U 1 1 5DC743B7
 P 8700 2850
-F 0 "#PWR?" H 8700 2700 50  0001 C CNN
+F 0 "#PWR019" H 8700 2700 50  0001 C CNN
 F 1 "+5V" H 8715 3023 50  0000 C CNN
 F 2 "" H 8700 2850 50  0001 C CNN
 F 3 "" H 8700 2850 50  0001 C CNN
@@ -764,10 +764,10 @@ Wire Wire Line
 Wire Wire Line
 	8700 2900 8800 2900
 $Comp
-L power:GND #PWR?
+L power:GND #PWR020
 U 1 1 5DC7A360
 P 8750 5650
-F 0 "#PWR?" H 8750 5400 50  0001 C CNN
+F 0 "#PWR020" H 8750 5400 50  0001 C CNN
 F 1 "GND" H 8755 5477 50  0000 C CNN
 F 2 "" H 8750 5650 50  0001 C CNN
 F 3 "" H 8750 5650 50  0001 C CNN

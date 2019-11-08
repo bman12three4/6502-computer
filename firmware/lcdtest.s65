@@ -1,0 +1,133 @@
+enable	= $01
+tmp1 	= $02
+
+index	= $03
+
+RS 	= $10
+EN1 	= $20
+EN2 	= $40
+
+VIA	= $4000
+VIA_ORA = VIA + 1
+VIA_IRA = VIA + 1
+VIA_DDRA= VIA + 3
+
+				; n/c EN2 EN1 RS D7 D6 D5 D4
+
+start:	lda #$ff		; Set VIA to all outputs
+	sta VIA_DDRA
+	ldy #$f0
+	jsr delay		
+	
+	lda #<(EN1 | EN2)	; Enable both displays
+	sta enable
+	
+	lda #$3			; Write 0011xxxx 3 times
+	jsr write4
+	ldy #$20
+	jsr delay
+	lda #$3
+	jsr write4
+	ldy #$20
+	jsr delay
+	lda #$3
+	jsr write4
+	ldy #$20
+	jsr delay
+	lda #$2			; Write 0010xxxx 1 time
+	jsr write4		; which sets 4 bit mode
+	ldy #$20
+	jsr delay
+	
+	lda #%00101000		; 2 line, 5x8 characters
+	jsr cmd
+	ldy #$20
+	jsr delay
+	
+	lda #%000001111		; Display on, cursor on, blinking on
+	jsr cmd
+	ldy #$20
+	jsr delay
+	
+	lda #%00000001		; Go home
+	jsr cmd
+	ldy #20
+	jsr delay
+	
+	lda #%00000110		; Move cursor to right, don't shift screen
+	jsr cmd
+	ldy #20
+	jsr delay
+	
+	
+	ldx #00
+loop:	stx index		; Print hello world
+	lda string,x
+	beq end
+	jsr write
+	ldx index
+	inx
+	jmp loop
+end:	jmp end
+	
+	
+cmd:	tax			; Send data with RS low
+	lda VIA_ORA
+	and #<~RS
+	sta VIA_ORA
+	txa
+	jmp send
+
+write:	tax			; Send data with RS high
+	lda VIA_ORA
+	ora #<RS
+	sta VIA_ORA
+	txa
+	jmp send
+
+send:	tay			; save a
+	lsr
+	lsr
+	lsr
+	lsr
+	jsr write4		; write high bits
+	tya
+	and #$0f
+	jsr write4		; write low bits
+	rts
+	
+write4: sta tmp1
+
+	lda enable     		; E high
+	ora VIA_ORA
+	sta VIA_ORA
+
+	lda tmp1       		; Data
+	lda VIA_ORA
+	and #$f0
+	ora tmp1
+	sta VIA_ORA
+
+	lda enable     		; E low
+	eor #$ff
+	and VIA_ORA
+	sta VIA_ORA
+
+	ldx #20
+@l1:    dex
+	bne @l1
+
+	rts
+	
+	
+	
+	
+delay:	ldx #$ff		; Loop through y
+delay1:	dex
+	bne delay1
+delay2:	dey
+	bne delay
+	rts
+	
+	
+string:	.byte "Hello, World!",00

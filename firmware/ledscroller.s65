@@ -1,0 +1,24 @@
+start:	lda #$ff
+	sta $4003	; Set DDRA to all outputs
+	lda #$00
+	sta $4002	; Set DDRB to all inputs
+	lda #$01
+	sta $4001	; Set port A to 1
+loop:	lda $4000	; Read port B
+	cmp #$2
+	beq right	; If it's two, go right
+	cmp #$1
+	beq left	; If it's one, go left
+	jmp loop	; Otherwise go back
+	
+right:	clc
+	ror $4001	; Rotate A to right
+	jmp wait	; Wait
+left:	clc
+	rol $4001	; Rotate A to left
+	jmp wait	; Wait
+	
+wait:	lda $4000	; Wait until port B is 0
+	cmp #$00	; No buttons are pressed
+	bne wait
+	jmp loop
