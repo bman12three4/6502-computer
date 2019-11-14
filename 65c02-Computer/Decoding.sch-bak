@@ -66,7 +66,7 @@ U 1 1 5DD09F52
 P 4900 4350
 F 0 "U7" H 4900 4675 50  0000 C CNN
 F 1 "74LS32" H 4900 4584 50  0000 C CNN
-F 2 "" H 4900 4350 50  0001 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 4900 4350 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 4900 4350 50  0001 C CNN
 	1    4900 4350
 	1    0    0    -1  
@@ -77,4 +77,8 @@ Text HLabel 4600 4450 0    50   Input ~ 0
 A13
 Text HLabel 5200 4350 2    50   Output ~ 0
 V1_CS2B
+Text HLabel 5200 4800 2    50   Output ~ 0
+ACIA1_CS0
+Text HLabel 5200 5100 2    50   Output ~ 0
+ACIA1_CS1B
 $EndSCHEMATC
