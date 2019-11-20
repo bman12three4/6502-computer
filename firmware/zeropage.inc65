@@ -1,0 +1,4 @@
+.importzp enable
+.importzp lcdtmp
+.importzp xpos
+.importzp ypos

@@ -1,0 +1,20 @@
+	.include "lcd.inc65"
+	.include "zeropage.inc65"
+	
+	.segment "VECTORS"
+	
+	.word nmi
+	.word reset
+	.word irq
+
+	.code
+	
+reset:	jmp main
+
+nmi:	rti
+
+irq:	rti
+
+
+main:	lda #10
+	jsr _lcd_init

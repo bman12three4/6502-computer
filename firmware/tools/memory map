@@ -6,3 +6,11 @@ A15 low AND a14 high, and A13 high, A2 low acia from 6000-7fff
 011xxxxxxxxxxxxx
 
 a15 | a14 - mce (if either is high then disabled)
+
+
+
+FOR PCB
+
+01111111000xxxxx VIA1  	
+01111111001xxxxx VIA2	
+01111111010xxxxx ACIA	

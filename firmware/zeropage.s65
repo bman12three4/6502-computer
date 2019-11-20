@@ -1,0 +1,12 @@
+	.exportzp enable
+	.exportzp lcdtmp
+	.exportzp xpos
+	.exportzp ypos
+
+.zeropage
+
+enable:	.byte 1
+lcdtmp: .byte 1
+
+xpos:	.byte 1
+ypos:	.byte 1
